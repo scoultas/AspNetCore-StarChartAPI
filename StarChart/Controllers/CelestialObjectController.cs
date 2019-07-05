@@ -79,7 +79,7 @@ namespace StarChart.Controllers
         {
             var result = _context.CelestialObjects.FirstOrDefault(x => x.Id == id);
 
-            if (result != null)
+            if (result == null)
             {
                 return NotFound();
             }
